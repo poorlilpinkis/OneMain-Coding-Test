@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+.wrapper {
+	margin: 61px 0 0 92px;
+	max-width: 1300px;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 32px;
+	letter-spacing: -0.288px;
+	margin: 0 0 7px 0;
+}
+
+p {
+	font-size: 16px;
+	letter-spacing: -0.304px;
+	margin: 0 0 23px 0;
+	padding: 0 0 10px;
+}
+
+label {
+	font-size: 12px;
+	letter-spacing: 0;
+	font-weight: 700;
+	padding: 8px 0 0 7px;
+	width: 100%;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+}	
+
+.container {
+	width: 50%;
+	display: flex;
+	box-sizing: border-box;
+    flex-wrap: wrap;
+	max-width: 653px;
+}
+
+.container.left {
+	width: 55%;
+	display: flex;
+	box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.container.right {
+	width: 45%;
+	display: flex;
+	box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.loan_account_number {
+	border: 1px solid #d0d5d8;
+	width: 100%;
+	display: flex;
+	height: auto;
+	min-height: 60px;
+	box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.account {
+	border: 1px solid #d0d5d8;
+	width: 100%;
+	display: flex;
+	max-width: 359px;
+	height: auto;
+	min-height: 60px;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+
+.account.dcard {
+	width: 50%;	
+}
+
+.find_number {
+	border: 1px solid #d0d5d8;
+	background-color: #f4f7fc;
+	width: 100%;
+}
+
+.find_number .account {
+	border: none;
+}	
+
+.find_number p {
+	text-align: center;
+	padding: 18px 42px 7px 48px;
+	font-size: 14px;
+	letter-spacing: 0;
+	font-weight: 500;
+	margin: 0;
+}
+
+p.debit_card {
+	padding: 18px 35px 10px 36px;	
+}
+
+.find_number img {
+	margin-left: 12px;
+	position: relative;
+}
+
+img.debit_card {
+	margin-left: 38px;
+}
+
+button {
+	margin-top: 22px;
+	padding: 18px;
+	font-weight: 700;
+	color: #fff;
+	background-color: #00a39e;
+	font-family: 'Roboto';
+	font-size: 14px;
+	letter-spacing: 0;
+	border: 0;
+	min-width: 208px;
+	text-transform: uppercase;
+}
+
+button:focus {
+	outline: none;
+}
+
+label.radio {
+	display: flex;
+	width: 23%;
+	padding: 3px;
+	font-size: 14px;
+	font-weight: 400;
+	padding: 1px 1px 1px 4px;
+}
+
+.box, .debit_card.box {
+	display: none;
+}
+
+.checking_account.box {
+    display: flex;
+}
+
+input#checking {
+	display: flex;
+	margin-left: 10px;
+}
+
+input {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	margin: 10px 0 10px 5px;
+	border: none;
+	width: 94%;
+}
+
+input:focus {
+	outline: none;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Errors */
+
+label.error {
+    color: #ce0c24;
+    font-size: 12px;
+    display: flex;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	background-color: #fae6e9;
+	border-top: 1px solid #d0d5d8;
+	padding: 6px 0 4px 7px;
+	margin-top: 0;
+}
+
+.field-error label {
+	color: #ce0c24;
+}
+
+/* Custom Radio Button */
+
+.radio_container {
+	display: flex;
+	position: relative;
+	width: 21%;
+	padding: 0 0 0 22px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0;
+	margin-left: 10px;
+  
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.radio_container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 12px;
+	width: 12px;
+	border-style: solid;
+	border-color: #e2e3e3;
+	border-radius: 50%;
+}
+
+.radio_container:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+.radio_container input:checked ~ .checkmark {
+	background-color: #3497ff;
+	border-color: #3497ff;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.radio_container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.radio_container .checkmark:after {
+ 	top: 4px;
+	left: 4px;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 1200px) {
+	.container.right, .container.left, .wrapper, .loan_account_number, .account , .container, .account.dcard {
+		width: 100%;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	h1 {
+		margin-top: 61px;
+		margin-left: 7px;
+	}	
+	p {
+		margin-left: 7px;
+	}
+	form {
+		margin: 0 7px;
+	}	
+	button {
+		width: 100%;
+		max-width: 100%;
+		margin-top: 20px;
+		margin-bottom: 41px;
+	}
+	.find_number {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+	}
+	.find_number img {
+		margin-left: 0;
+		margin-bottom: 21px;
+	}
+	img.debit_card {
+		margin-left: 0;
+		margin-bottom: 39px;
+	}
+	.find_number p {
+		padding: 25px 48px 10px;
+		width: 100%;
+		justify-content: center;
+	}	
+	p.debit_card {
+		padding: 43px 35px 10px 36px;
+	}
+	.radio_container {
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-webkit-tap-highlight-color: transparent;
+	}
+}	

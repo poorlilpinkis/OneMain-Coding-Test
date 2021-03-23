@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One-time Loan Payment</title>
+<link rel="stylesheet" href="./css/style.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script src="./js/scripts.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+	<h1>One-time Loan Payment</h1> 
+	<p>Fill out the form below to complete your payment.</p>
+
+	<div class="container">
+		<form action="./submit-success.html" method="get" id="OneTime_Loan">
+			<div class="loan_account_number">
+				<label for="loan_number">Loan Account Number</label>
+				<input type="number" id="loan_number" name="loan_number">
+			</div>
+
+	<div class="container left">
+		<div class="account checking">
+			<label>Type of Account:</label>
+				<label class="radio_container">Checking
+					<input type="radio" checked="checked" name="radio" value="checking_account">
+					<span class="checkmark"></span>
+				</label>
+			<label class="radio_container">Debit Card
+				<input type="radio" name="radio" value="debit_card">
+				<span class="checkmark"></span>
+			</label>
+		</div>
+
+		<div class="account checking_account box">
+			<label for="routing_number" id="routing_number" name="routing_number">Routing Number</label>
+			<input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="9" class="input" id="routing_number" name="routing_number">
+		</div>
+		
+		<div class="account debit_card box">
+			<label for="card_number">Card Number</label>
+			<input type="number" class="input" id="card_number" name="card_number">
+		</div>
+
+		<div class="account checking_account box">
+			<label for="bank_number">Bank Account Number</label>
+			<input type="number" class="input" id="bank_number" name="bank_number">
+		</div>
+
+		<div class="account debit_card box">
+			<label for="name_on_card">Name On Card</label>
+			<input type="text" class="input" id="name_on_card" name="name_on_card">
+		</div>
+
+		<div class="account checking_account box">
+			<label for="confirm_bank_number">Confirm Bank Account Number</label>
+			<input type="number" class="input" id="confirm_bank_number" name="confirm_bank_number">
+		</div>
+
+		<div class="account dcard debit_card box">
+			<label for="expire_date">Expiration Date</label>
+			<input type="text" class="input" maxlength='5' id="expire_date" name="expire_date">
+		</div>
+
+		<div class="account dcard debit_card box">
+			<label for="cvv_number">CVV</label>
+			<input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="3" class="input" id="cvv_number" name="cvv_number">
+		</div>
+
+	</div>
+
+	<div class="container right">
+		<div class="find_number">
+			<p class="checking_account box">Where can I find the routing and account number?</p>
+			<img class="checking_account box" src="images/check.png" alt="One-time Loan Payment Check">
+			
+			<p class="debit_card box">Where can I find the CVV number?</p>
+			<img class="debit_card box" src="images/cvv.png" alt="One-time Loan Payment Debit Card">	
+		</div>
+	</div>
+	
+		<button type="submit" form="OneTime_Loan" value="Submit">Make Payment</button>
+		
+	</form>
+	</div>
+</div>
+</body>
+</html>
